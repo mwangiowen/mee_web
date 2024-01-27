@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About mee🌹</title>
+    <link rel="stylesheet" href="mee.css" />
+    <style>
+      /* Add this style to hide the audio controls */
+      audio {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fade"></div>
+
+    <section class="star-wars">
+      <div class="crawl">
+        <div class="title">
+          <p>mwangiowen</p>
+          <h1>Discover the World of a Dedicated Software Engineer</h1>
+        </div>
+
+        <p>
+          Greetings! I'm a passionate and dedicated software engineer, ready to
+          showcase my journey through the realms of coding and innovation.
+        </p>
+
+        <p>
+          With a keen eye for detail and a commitment to improving code
+          functionality, I thrive on the dynamic challenges that the tech
+          industry presents.
+        </p>
+
+        <p>
+          Embark on this journey with me as I strive for excellence in software
+          development, becoming the custodian of solutions that not only drive
+          projects forward but also bring order to the coding galaxy.
+        </p>
+
+        <p>
+          GitHub:
+          <a href="https://github.com/mwangiowen" target="_blank">mwangiowen</a>
+        </p>
+        <p>Email: owen31588@gmail.com</p>
+
+        <p>
+          Connect with me on GitHub to explore my projects and collaborations.
+          Feel free to reach out via email to discuss exciting opportunities or
+          just to chat about the ever-evolving tech world.
+        </p>
+
+        <p>
+          The tech world is a fascinating space where innovation knows no
+          bounds. From cutting-edge technologies to collaborative coding
+          ventures, I'm here to navigate this digital frontier and contribute to
+          the evolution of the tech landscape.
+        </p>
+      </div>
+    </section>
+
+  <audio id="background-music" loop controls>
+  <source src="http://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg" type="audio/mp3" />
+  Your browser does not support the audio element.
+</audio>
+
+    <script>
+      // Get the audio element
+      var audio = document.getElementById("background-music");
+
+      // Set initial volume to a low value
+      audio.volume = 0.1;
+
+      // Play the audio
+      audio.play();
+
+      // Increase the volume gradually over 10 seconds
+      var fadeInInterval = setInterval(function () {
+        if (audio.volume < 1) {
+          audio.volume += 0.1 / 100; // Increase by 0.1% every 50 milliseconds
+        } else {
+          clearInterval(fadeInInterval);
+        }
+      }, 50);
+
+      // Set a timeout to fade out the audio after 44 seconds
+      setTimeout(function () {
+        var fadeOutInterval = setInterval(function () {
+          // Reduce the volume gradually
+          if (audio.volume > 0.02) {
+            audio.volume -= 0.02;
+          } else {
+            // Stop and hide the audio element when volume is very low
+            audio.pause();
+            audio.style.display = "none";
+            clearInterval(fadeOutInterval);
+
+            // Redirect to another page after 6 seconds
+            setTimeout(function () {
+              window.location.href = "index.html"; // Replace with the actual page URL
+            }, 6000); // 6 seconds in milliseconds (50 seconds - 44 seconds)
+          }
+        }, 55); // 50 milliseconds interval
+      }, 49000); // 44 seconds in milliseconds
+    </script>
+  </body>
+</html>

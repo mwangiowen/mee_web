@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B_baleta🇰🇪</title>
+    <!-- Adjust the path to your "home.css" file -->
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+  <p align="center" class="how" style="color: #90EE90;">
+  <img src="https://readme-typing-svg.demolab.com/?lines=How%20to%20Get%20in%20Touch%20With%20Me&font=Fira%20Code&center=true&width=700&height=45&color=800080&vCenter=true&pause=1000&size=25" />
+</p>
+
+
+    <nav class="circular-menu">
+      <div class="circle">
+        <a href="index.html" class="fa fa-home fa-2x"></a>
+        <a href="https://www.facebook.com/owen.macharia.545/" class="fa fa-facebook fa-2x"></a>
+        <a href="https://twitter.com/TheeOwenSmith" class="fa fa-twitter fa-2x"></a>
+        <a href="https://www.linkedin.com/in/owen-smith-81227a290/" class="fa fa-linkedin fa-2x"></a>
+        <a href="https://github.com/mwangiowen" class="fa fa-github fa-2x"></a>
+        <a href="" class="fa fa-rss fa-2x"></a>
+        <a href="https://www.pinterest.com/owen12m/" class="fa fa-pinterest fa-2x"></a>
+      </div>
+
+      <a href="" class="menu-button fa fa-bars fa-2x"></a>
+    </nav>
+
+    <h1 class="author">
+      This is me
+      <a href="https://github.com/mwangiowen" target="_blank">Click here</a>
+    </h1>
+
+    <script>
+      var items = document.querySelectorAll(".circle a");
+
+      for (var i = 0, l = items.length; i < l; i++) {
+        items[i].style.left =
+          (
+            50 - 35 * Math.cos(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)
+          ).toFixed(4) + "%";
+
+        items[i].style.top =
+          (
+            50 + 35 * Math.sin(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)
+          ).toFixed(4) + "%";
+      }
+
+      document.querySelector(".menu-button").onclick = function (e) {
+        e.preventDefault();
+        document.querySelector(".circle").classList.toggle("open");
+      };
+    </script>
+  </body>
+</html>
